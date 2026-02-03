@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,margin=1.7cm]{geometry}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*,itemsep=2pt,topsep=3pt}
+
+\newcommand{\sectionspacebefore}{1.05em}
+\newcommand{\sectionspacetoline}{-0.12em}
+\newcommand{\sectionspacetocontent}{0.58em}
+\newcommand{\roleblockgap}{0.65em}
+
+\newcommand{\cvsection}[1]{
+  \par\vspace{\sectionspacebefore}
+  {\large\bfseries\color{black}#1}\par
+  \vspace{\sectionspacetoline}
+  \noindent\rule{\textwidth}{0.45pt}\par
+  \vspace{\sectionspacetocontent}
+}
+
+\newcommand{\cvname}{Matthias Hutter}
+\newcommand{\cvtitle}{Senior Software Architect | Platform and Financial Data Systems}
+\newcommand{\cvlocation}{Vienna, Austria}
+\newcommand{\cvphone}{+43 650 8223546}
+\newcommand{\cvemail}{hutter.matthias@gmail.com}
+\newcommand{\cvgithub}{github.com/ScepticMatt}
+\newcommand{\cvlinkedin}{linkedin.com/in/matthias-hutter-7837349a}
+
+\newcommand{\role}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
+  \vspace{0.25em}
+}
+
+\begin{document}
+
+{\LARGE\textbf{\cvname}}\\[0.15em]
+{\large\cvtitle}\\[0.45em]
+{\small \cvlocation{} \textbar{} \cvphone{} \textbar{} \href{mailto:\cvemail}{\cvemail}}\\
+{\small \href{https://\cvgithub}{\cvgithub} \textbar{} \href{https://\cvlinkedin}{\cvlinkedin}}
+
+\cvsection{Professional Summary}
+\begin{itemize}
+  \item Senior Software Architect and Infrastructure Leader with 8+ years delivering backend, platform, and data systems in fintech and digital assets.
+  \item End-to-end ownership across architecture, implementation, CI/CD, observability, incident response, and production operations.
+  \item Proven delivery of audit-ready financial data pipelines and reporting used by trading, operations, and finance stakeholders.
+  \item Hands-on technical leader with experience hiring, mentoring, and scaling engineering teams in distributed and cross-functional environments.
+\end{itemize}
+
+\cvsection{Work Experience}
+\role{Director of Infrastructure}{Jan 2023 -- Present}{Dark Forest Limited}{Vienna / Remote}
+\begin{itemize}
+  \item Own infrastructure architecture and operations for a regulated electronic trading environment, including multi-cloud and bare-metal deployments.
+  \item Built and operated validator infrastructure across \textasciitilde20 PoS networks (\textasciitilde60 validators), with strong reliability and operational discipline.
+  \item Designed and delivered the Accounting Data Manager (ADM), consolidating 10 exchange feeds and internal metadata into auditable golden-source datasets.
+  \item Implemented automated NAV, balance, and PnL reporting across API, dashboard, email, Slack, and Excel workflows used in daily operations.
+  \item Partnered with engineering, trading, operations, and finance stakeholders in a distributed setup to align delivery priorities and incident response.
+\end{itemize}
+\textbf{Tech:} Node.js, TypeScript, OpenAPI, PostgreSQL, kdb+, AWS, OVH, React, Keycloak, Terraform, Ansible
+
+\vspace{\roleblockgap}
+\role{Crypto Research Director}{Jan 2022 -- Dec 2022}{Dark Forest GmbH}{Vienna}
+\begin{itemize}
+  \item Led infrastructure architecture and automation during the company build-out phase for trading and staking workloads.
+  \item Automated provisioning and configuration management for dedicated hardware and cloud hosts.
+  \item Built internal services for blockchain and market data ingestion to support trading decisions and reporting workflows.
+\end{itemize}
+\textbf{Tech:} Python, Java, Spring, Terraform, Ansible, Kafka, RabbitMQ, Prometheus, React
+
+\vspace{\roleblockgap}
+\role{Lead Technical Architect}{Mar 2020 -- Dec 2022}{Kivu Technologies}{Vienna}
+\begin{itemize}
+  \item Led modernization of legacy systems toward bi-temporal time-series graph processing architecture.
+  \item Designed temporal graph components and automated data processing pipelines for enterprise integration use cases.
+  \item Drove delivery across product, engineering, QA, and customer stakeholders from requirements through implementation, acceptance testing, and production support.
+\end{itemize}
+\textbf{Tech:} Java, Vert.x, Spring, Lucene, RocksDB, PostgreSQL, MySQL, Jenkins
+
+\vspace{\roleblockgap}
+\role{Backend Team Lead}{Nov 2018 -- Mar 2020}{Kivu Technologies}{Vienna}
+\begin{itemize}
+  \item Managed backend roadmap, sprint delivery, and engineering standards for core platform services.
+  \item Hired and mentored backend engineers through structured onboarding, code review, and technical coaching.
+  \item Improved development workflows through stronger CI practices, quality gates, and clearer definition-of-done criteria.
+\end{itemize}
+
+\vspace{\roleblockgap}
+\role{Backend Developer}{Sep 2017 -- Nov 2018}{Kivu Technologies}{Vienna}
+\begin{itemize}
+  \item Built backend APIs and integration layers between frontend applications and core graph services.
+  \item Developed Redis-based metadata storage using Java APIs, Lua scripts, and C-module integrations.
+  \item Helped align frontend and backend teams through coordinated refactoring and delivery planning.
+\end{itemize}
+
+\vspace{\roleblockgap}
+\role{University Tutor (Computer Science)}{Jan 2016 -- Mar 2017}{URACCAN}{Nicaragua}
+\begin{itemize}
+  \item Taught algorithms, complexity basics, and applied programming in C.
+  \item Coached trainee teachers and supported curriculum delivery in intercultural education programs.
+\end{itemize}
+
+\cvsection{Technical Skills}
+\textbf{Core Areas:} Platform Architecture, Backend Engineering, Financial Data Systems, Infrastructure Automation, Team Leadership\\
+\textbf{Languages:} TypeScript, Java, Python, C/C++, JavaScript, SQL\\
+\textbf{Backend and APIs:} Node.js, Express, Vert.x, Spring, REST, OpenAPI, RabbitMQ, Kafka\\
+\textbf{Data and Storage:} PostgreSQL, MySQL, Redis, RocksDB, Apache Lucene, kdb+\\
+\textbf{Cloud and DevOps:} AWS, Linux, Terraform, Ansible, Docker, CI/CD, GitHub Actions\\
+\textbf{Observability and Identity:} Prometheus, Alertmanager, Grafana, OIDC, RBAC, Keycloak
+
+\cvsection{Education}
+\textbf{Coursework in Electronics Engineering} \hfill 2011 -- 2014\\
+Swiss Federal Institute of Technology (ETH Zurich)
+
+\vspace{0.35em}
+\textbf{Coursework in Physics} \hfill 2008 -- 2011\\
+Swiss Federal Institute of Technology (ETH Zurich)
+
+\vspace{0.35em}
+\textbf{Electrical Engineering Apprenticeship + Secondary School Diploma} \hfill 2003 -- 2008\\
+Werkschulheim Felbertal
+
+\end{document}

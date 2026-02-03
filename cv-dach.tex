@@ -1,0 +1,156 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,margin=1.6cm]{geometry}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+\newcommand{\sectionspacebefore}{0.85em}
+\newcommand{\sectionspacetoline}{-0.12em}
+\newcommand{\sectionspacetocontent}{0.48em}
+\newcommand{\roleblockgap}{0.52em}
+
+\newcommand{\cvsection}[1]{
+  \par\vspace{\sectionspacebefore}
+  {\large\bfseries\color{black}#1}\par
+  \vspace{\sectionspacetoline}
+  \noindent\rule{\textwidth}{0.45pt}\par
+  \vspace{\sectionspacetocontent}
+}
+
+\newcommand{\cvname}{Matthias Hutter}
+\newcommand{\cvheadline}{Senior Software Architect | Infrastruktur und Finanzdaten-Systeme}
+\newcommand{\cvaddress}{Bruno-Marek-Allee 10/64, 1020 Wien}
+\newcommand{\cvphone}{+43 650 8223546}
+\newcommand{\cvemail}{hutter.matthias@gmail.com}
+\newcommand{\cvgithub}{github.com/ScepticMatt}
+\newcommand{\cvlinkedin}{linkedin.com/in/matthias-hutter-7837349a}
+
+\newcommand{\birthdate}{27.08.1989}
+\newcommand{\nationality}{Österreich}
+
+\newcommand{\role}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
+  \vspace{0.15em}
+}
+
+\begin{document}
+
+\begin{minipage}[t]{0.73\textwidth}
+\vspace{0pt}
+{\LARGE\textbf{\cvname}}\\[0.2em]
+{\large\cvheadline}\\[0.8em]
+\begin{tabular}{@{}ll@{}}
+Adresse: & \cvaddress \\
+Telefon: & \cvphone \\
+E-Mail: & \href{mailto:\cvemail}{\cvemail} \\
+GitHub: & \href{https://\cvgithub}{\cvgithub} \\
+LinkedIn: & \href{https://\cvlinkedin}{\cvlinkedin} \\
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.23\textwidth}
+\vspace{0pt}
+\raggedleft
+\IfFileExists{crop.jpg}{\includegraphics[width=0.80\linewidth]{crop.jpg}}{\fbox{\parbox[c][3.8cm][c]{0.8\linewidth}{\centering Foto}}}
+\end{minipage}
+
+\vspace{-0.1em}
+\cvsection{Persönliche Daten}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+Geburtsdatum: & \birthdate \\
+Staatsangehörigkeit: & \nationality \\
+Wohnort: & Wien, Österreich \\
+\end{tabularx}
+
+\cvsection{Kurzprofil}
+\begin{itemize}
+  \item Senior Software Architect und Infrastrukturverantwortlicher mit 8+ Jahren Erfahrung in FinTech- und Digital-Asset-Umgebungen.
+  \item End-to-End-Verantwortung von Architektur und Umsetzung bis zu CI/CD, Monitoring, Incident Response und stabilem Produktionsbetrieb.
+  \item Fundierte Erfahrung in auditierbaren Finanzdaten-Pipelines und Reporting (NAV, Balance, PnL) für regulierte Handelsprozesse.
+  \item Hands-on-Führungserfahrung in Recruiting, Mentoring und teamübergreifender Delivery in verteilten und internationalen Teams.
+\end{itemize}
+
+\cvsection{Berufserfahrung}
+\role{Director of Infrastructure}{Jan 2023 -- heute}{Dark Forest Limited}{Wien / Remote}
+\begin{itemize}
+  \item Verantwortung für Architektur und Betrieb der Infrastruktur in einem regulierten, international aufgestellten Electronic-Trading-Umfeld.
+  \item Aufbau und Betrieb einer Validator-Landschaft über \textasciitilde20 PoS-Netzwerke (\textasciitilde60 Validatoren) auf Cloud- und Bare-Metal-Infrastruktur.
+  \item Konzeption und Umsetzung des Accounting Data Managers (ADM) als auditierbare Golden Source für Exchange- und Kontodaten.
+  \item Etablierung von automatisiertem NAV-, Balance- und PnL-Reporting via API, Dashboard, E-Mail, Slack und Excel.
+\end{itemize}
+\textbf{Technologien:} Node.js, TypeScript, OpenAPI, PostgreSQL, kdb+, AWS, OVH, React, Keycloak, Terraform, Ansible
+
+\vspace{\roleblockgap}
+\role{Crypto Research Director}{Jan 2022 -- Dez 2022}{Dark Forest GmbH}{Wien}
+\begin{itemize}
+  \item Leitung von Infrastruktur-Architektur und Automatisierung während des Unternehmensaufbaus.
+  \item Automatisierte Provisionierung und Konfigurationsmanagement für dedizierte Hardware und Cloud-Systeme.
+  \item Entwicklung interner Services für Blockchain- und Marktdaten zur Unterstützung von Trading und Reporting.
+\end{itemize}
+\textbf{Technologien:} Python, Java, Spring, Terraform, Ansible, Kafka, RabbitMQ, Prometheus, React
+
+\vspace{\roleblockgap}
+\role{Lead Technical Architect}{Mär 2020 -- Dez 2022}{Kivu Technologies}{Wien}
+\begin{itemize}
+  \item Leitung einer umfassenden Modernisierung von Legacy-Systemen in Richtung bi-temporaler Time-Series-Graph-Architektur.
+  \item Entwurf von Datenmodellen, Graph-Komponenten und automatisierten Datenpipelines für Enterprise-Integrationen.
+  \item Steuerung der Umsetzung in enger Abstimmung mit Produkt, Entwicklung, QA und Kunden bis User-Acceptance und produktivem Betrieb.
+\end{itemize}
+\textbf{Technologien:} Java, Vert.x, Spring, Lucene, RocksDB, PostgreSQL, MySQL, Jenkins
+
+\vspace{\roleblockgap}
+\role{Backend Team Lead}{Nov 2018 -- Mär 2020}{Kivu Technologies}{Wien}
+\begin{itemize}
+  \item Verantwortung für Backend-Roadmap, Codequalität und Team-Delivery.
+  \item Recruiting und Coaching von Entwicklerinnen und Entwicklern durch strukturierte Onboarding- und Review-Prozesse.
+  \item Verbesserungen in CI-Prozessen, Qualitäts-Gates und Performance-Monitoring.
+\end{itemize}
+
+\vspace{\roleblockgap}
+\role{Backend Developer}{Sep 2017 -- Nov 2018}{Kivu Technologies}{Wien}
+\begin{itemize}
+  \item Entwicklung von REST-Schnittstellen und Integrationsschichten zwischen Frontend und Core-Backend.
+  \item Aufbau Redis-basierter Metadaten-Lösungen (Java API, Lua, C-Module).
+  \item Aktive Brückenfunktion zwischen Frontend- und Backend-Teams in einer produktkritischen Rework-Phase.
+\end{itemize}
+
+\vspace{\roleblockgap}
+\role{University Tutor (Computer Science)}{Jan 2016 -- Mär 2017}{URACCAN}{Nicaragua}
+\begin{itemize}
+  \item Unterricht in Algorithmen, Komplexität und Programmierung in C.
+  \item Betreuung von Lehramtspraktika und Unterstützung der Studienprogramme.
+\end{itemize}
+
+\cvsection{Technische Kenntnisse}
+\textbf{Kernkompetenzen:} Plattform-Architektur, Backend-Engineering, Finanzdaten-Systeme, Infrastruktur-Automatisierung, Teamführung\\
+\textbf{Programmiersprachen:} TypeScript, Java, Python, C/C++, JavaScript, SQL\\
+\textbf{Backend und APIs:} Node.js, Express, Vert.x, Spring, REST, OpenAPI, RabbitMQ, Kafka\\
+\textbf{Daten und Storage:} PostgreSQL, MySQL, Redis, RocksDB, Apache Lucene, kdb+\\
+\textbf{Infrastruktur und Betrieb:} AWS, Linux, Terraform, Ansible, Docker, CI/CD, GitHub Actions\\
+\textbf{Monitoring und Identity:} Prometheus, Alertmanager, Grafana, OIDC, RBAC, Keycloak
+
+\cvsection{Ausbildung}
+\textbf{Studium (ohne Abschluss): Electronics Engineering} \hfill 2011 -- 2014\\
+Swiss Federal Institute of Technology (ETH Zurich)
+
+\vspace{0.15em}
+\textbf{Studium (ohne Abschluss): Physik} \hfill 2008 -- 2011\\
+Swiss Federal Institute of Technology (ETH Zurich)
+
+\vspace{0.15em}
+\textbf{Elektrotechnik-Lehre + Matura} \hfill 2003 -- 2008\\
+Werkschulheim Felbertal
+
+\end{document}
